@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :artist_name %>
+    <%= form.text_field :name, id: :artist_name, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :genre_id %>
-    <%= form.collection_select :genre_id, Genre.all, :id, :name %>
+    <%= form.collection_select :genre_id, Genre.all, :id, :name, {},{class: 'form-control'} %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions form-group">
+    <%= form.submit class: "btn btn-sm btn-cool" %>
   </div>
 <% end %>
