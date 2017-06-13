@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :artist_id %>
-    <%= form.collection_select :artist_id, Artist.all, :id, :name %>
+    <%= form.collection_select :artist_id, Artist.all, :id, :name, {prompt: 'choose an artist'} %>
   </div>
 
   <div class="actions">
