@@ -1,7 +1,7 @@
 body {
-  background-color: #fff;
-  color: #333;
-  margin: 33px;
+  background-color: #b7f7bf;
+  color: black;
+  margin: 5px;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -14,23 +14,32 @@ p, ol, ul, td {
 }
 
 pre {
-  background-color: #eee;
+  background-color: black;
   padding: 10px;
   font-size: 11px;
 }
 
 a {
-  color: #000;
-
-  &:visited {
-    color: #666;
-  }
+  color: #000000;
 
   &:hover {
     color: #fff;
     background-color: #000;
   }
 }
+
+tr:hover {background-color: cyan;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: #ad54f7;
+ }
+
+.table-striped>tbody>tr:nth-child(even)>td,
+.table-striped>tbody>tr:nth-child(even)>th {
+   background-color: #c289f4;
+ }
 
 th {
   padding-bottom: 5px;
@@ -56,12 +65,26 @@ div {
   display: table;
 }
 
+.btn-cool {
+  background-color: #ad54f7;
+  color: #000000;
+}
+
+.btn-cool:hover {
+    background-color: cyan;
+}
+
 #error_explanation {
   width: 450px;
   border: 2px solid red;
   padding: 7px 7px 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
+
+  h1 {
+    font-size: 20px;
+    font-family: tahoma;
+  }
 
   h2 {
     text-align: left;

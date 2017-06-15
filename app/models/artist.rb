@@ -30,5 +30,9 @@ class Artist < ApplicationRecord
     # genre actually exists
   validates :genre, presence: true
 
+  scope :recent, -> (minutes_past=60) {where("created_at > ?", minutes_past.minutes_ago)}
+
+  scope :today, -> { where('DATE(created_at) = ?', Date.today)}
+
 
 end

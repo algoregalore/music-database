@@ -19,4 +19,6 @@ class Song < ApplicationRecord
   validates :name, presence: true, length: {minimum: 2}
   # validates artist is present and in our database
   validates :artist, presence: true
+
+  validates_uniqueness_of :name, scope: :artist_id
 end
